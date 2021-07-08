@@ -34,7 +34,7 @@ either expressed or implied, of the Regents of The University of Michigan.
 #include <stdint.h>
 #include <inttypes.h>
 #include <ctype.h>
-#include <unistd.h>
+//#include <unistd.h>
 #include <math.h>
 
 #include "apriltag.h"
@@ -115,7 +115,7 @@ int main(int argc, char *argv[])
 
     int maxiters = getopt_get_int(getopt, "iters");
 
-    const int hamm_hist_max = 10;
+ #define hamm_hist_max  10
 
     for (int iter = 0; iter < maxiters; iter++) {
 
